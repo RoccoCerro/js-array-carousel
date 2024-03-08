@@ -50,7 +50,7 @@ body{
     line-height: 50px;
     font-size: 20px;
     position: absolute;
-    transform: translatey(-50%);
+    transform: translatex(50%);
     background-color: rgba(128, 128, 128, 0.356);
 }
 
@@ -63,13 +63,13 @@ body{
 }
 
 .next{
-    right: 0;
-    top: 50%;
+    right: 100px;
+    top: 0;
 }
 
 .back{
-    top: 50%;
-    
+    bottom: 5px;
+    right: 100px;
 }
 
 /* DEBUG */
