@@ -18,14 +18,19 @@ const arrayImg = [
 ];
 
 const containerItemsDomElement = document.querySelector(".items-container");
-console.log(containerItemsDomElement)
+let divHtmlImg = ``;
 
 for (let i = 0; i < arrayImg.length; i++) {
     let img = arrayImg[i];
-    let divHtmlImg = `
-        <div class="item">
+    divHtmlImg = `
+        <div class="item ">
             <img src="${img}"></img>
         </div>
     `;
     containerItemsDomElement.innerHTML += divHtmlImg;
 }
+
+let itemElement = document.getElementsByClassName("item");
+console.log(itemElement);
+
+itemElement[0].classList.add("active");
