@@ -10,6 +10,14 @@ img{
     position: relative;
 }
 
+/* .items-thumbnails{
+    width: 200px;
+    height: 350px;
+    position: absolute;
+    top: 0;
+    right: 0;
+} */
+
 .ms_arrow{
     border: 2px solid lightgray;
     border-radius: 50%;
@@ -21,10 +29,6 @@ img{
     position: absolute;
     transform: translatey(-50%);
     background-color: rgba(128, 128, 128, 0.356);
-}
-
-.d-none {
-    display: none;
 }
 
 .item{
@@ -46,7 +50,7 @@ img{
 }
 
 /* DEBUG */
-.debug .container {
+.debug .container, .items-thumbnails {
     border: 2px solid red;
     height: 350px;
 }

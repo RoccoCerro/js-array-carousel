@@ -5,7 +5,7 @@
 // Al termine di questa fase ci ritroveremo con lo stesso slider stilato nella milestone 1, ma costruito dinamicamente
 //  attraverso JavaScript.
 
-// PSEUDOCODICE
+// PSEUDOCODICE MILESTONE2
 // Creo l'arrey con i nomi delle img
 // Creo un ciclo per prendere uno alla volta i nomi nell'arrey e inserire del codice html per ognuno di essi
 
@@ -15,6 +15,19 @@
 // BONUS 1:
 // Aggiungere il ciclo infinito del carosello. Ovvero se è attiva la prima immagine e l'utente clicca la freccia per andare 
 // all’immagine precedente, dovrà comparire l’ultima immagine dell’array e viceversa.
+
+// BONUS 2:
+// Aggiungere la visualizzazione di tutte le thumbnails sulla destra dell’immagine grande attiva, come nello screenshot proposto. 
+// Tutte le miniature avranno un layer di opacità scura, tranne quella corrispondente all’immagine attiva, che invece avrà un bordo colorato.
+// Al click delle frecce, oltre al cambio di immagine attiva, gestire il cambio di miniatura attiva.
+
+// PSEUDOCODICE BONUS2
+// - Aggiungere la visualizzazione di tutte le thumbnails sulla destra dell’immagine grande attiva, come nello screenshot proposto.
+//  - Creerò un container nell'html in cui andro ad inserire tutte le miniature in maniera dinamica
+//    - Con position lo posiziono come nella foto
+// - Tutte le miniature avranno un layer di opacità scura, tranne quella corrispondente all’immagine attiva, che invece avrà un bordo colorato.
+//  - Come con l'esercizio precendete andro ad aggiungere e togliere le classi per far schiarire l'img
+
 
 const arrayImg = [
     "./img/01.webp",
@@ -58,13 +71,6 @@ nextDomElement.addEventListener("click", function(){
         currentIndex++
         itemElement[currentIndex].classList.add("active")
     }
-
-    // if (currentIndex === arrayImg.length - 1){
-    //     itemElement[arrayImg.lengh-1].classList.remove("active")
-    //     currentIndex = 0        
-    //     itemElement[currentIndex].classList.add("active")
-    // }
-    // console.log(currentIndex)
 })
 
 backDomElement.addEventListener("click", function(){
