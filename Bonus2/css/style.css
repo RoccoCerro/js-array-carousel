@@ -42,13 +42,12 @@ body{
 }
 
 .ms_arrow{
-    border: 2px solid lightgray;
-    border-radius: 50%;
     width: 50px;
+    border-radius: 50%;
     aspect-ratio: 1;
     text-align: center;
     line-height: 50px;
-    font-size: 20px;
+    font-size: 25px;
     position: absolute;
     transform: translatex(50%);
     background-color: rgba(128, 128, 128, 0.356);
