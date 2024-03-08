@@ -25,20 +25,13 @@ body{
     right: 0;
     display: flex;
     flex-direction: column;
+    background-color: black;
         & img {
             width: 100%;
             height: calc(490px/5);
             object-fit: cover;
             display: block;
         }
-}
-
-.dark-layer {
-    
-}
-
-.border{
-    border: 5px solid gray;
 }
 
 .ms_arrow{
@@ -70,6 +63,16 @@ body{
     bottom: 5px;
     right: 100px;
 }
+
+.thumb{
+    opacity: 0.3;
+}
+
+.border{
+    border: 5px solid gray;
+    opacity: 1;
+}
+
 
 /* DEBUG */
 .debug .container, .debug .items-thumbnails {
