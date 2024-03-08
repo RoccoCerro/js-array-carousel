@@ -1,0 +1,42 @@
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.ms_arrow{
+    border: 2px solid lightgray;
+    border-radius: 50%;
+    width: 50px;
+    aspect-ratio: 1;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    position: absolute;
+    transform: translatey(-50%);
+    background-color: rgba(128, 128, 128, 0.356);
+}
+
+.active{
+    display: block;
+}
+
+.item{
+    display: none;
+}
+
+.next{
+    right: 0;
+    top: 50%;
+}
+
+.back{
+    top: 50%;
+    
+}
+
+/* DEBUG */
+.debug .container {
+    border: 2px solid red;
+    height: 350px;
+}
