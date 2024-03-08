@@ -18,19 +18,38 @@ const arrayImg = [
 ];
 
 const containerItemsDomElement = document.querySelector(".items-container");
+const nextDomElement = document.querySelector('.next');
+const backDomElement = document.querySelector('.back');
 let divHtmlImg = ``;
+
+let currentIndex = 0;
+let itemElement = document.getElementsByClassName("item");
 
 for (let i = 0; i < arrayImg.length; i++) {
     let img = arrayImg[i];
+    let classes = '';
+    if (i === currentIndex) {
+        classes = 'active';
+    }
     divHtmlImg = `
-        <div class="item ">
+        <div class="item ${classes}">
             <img src="${img}"></img>
         </div>
     `;
     containerItemsDomElement.innerHTML += divHtmlImg;
 }
 
-let itemElement = document.getElementsByClassName("item");
-console.log(itemElement);
+nextDomElement.addEventListener("click", function(){
+    
+    itemElement[currentIndex].classList.remove("active")
+    currentIndex++
+    itemElement[currentIndex].classList.add("active")
+})
 
-itemElement[0].classList.add("active");
+backDomElement.addEventListener("click", function(){
+    
+    itemElement[currentIndex].classList.remove("active")
+    currentIndex--
+    itemElement[currentIndex].classList.add("active")
+})
+

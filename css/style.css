@@ -23,6 +23,10 @@ img{
     background-color: rgba(128, 128, 128, 0.356);
 }
 
+.d-none {
+    display: none;
+}
+
 .item{
     display: none;
 }
