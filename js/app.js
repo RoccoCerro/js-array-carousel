@@ -9,6 +9,13 @@
 // Creo l'arrey con i nomi delle img
 // Creo un ciclo per prendere uno alla volta i nomi nell'arrey e inserire del codice html per ognuno di essi
 
+// MILESTONE 3
+// Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, che quindi verrà visualizzata al posto della precedente.
+
+// BONUS 1:
+// Aggiungere il ciclo infinito del carosello. Ovvero se è attiva la prima immagine e l'utente clicca la freccia per andare 
+// all’immagine precedente, dovrà comparire l’ultima immagine dell’array e viceversa.
+
 const arrayImg = [
     "./img/01.webp",
     "./img/02.webp",
@@ -40,16 +47,37 @@ for (let i = 0; i < arrayImg.length; i++) {
 }
 
 nextDomElement.addEventListener("click", function(){
-    
-    itemElement[currentIndex].classList.remove("active")
-    currentIndex++
-    itemElement[currentIndex].classList.add("active")
+
+    if (currentIndex === arrayImg.length - 1){
+        itemElement[currentIndex].classList.remove("active")
+        currentIndex = 0        
+        itemElement[currentIndex].classList.add("active")
+    }
+    else{    
+        itemElement[currentIndex].classList.remove("active")
+        currentIndex++
+        itemElement[currentIndex].classList.add("active")
+    }
+
+    // if (currentIndex === arrayImg.length - 1){
+    //     itemElement[arrayImg.lengh-1].classList.remove("active")
+    //     currentIndex = 0        
+    //     itemElement[currentIndex].classList.add("active")
+    // }
+    // console.log(currentIndex)
 })
 
 backDomElement.addEventListener("click", function(){
-    
+
+    if (currentIndex === 0){
+        itemElement[currentIndex].classList.remove("active")
+        currentIndex = 4        
+        itemElement[currentIndex].classList.add("active")
+    }
+    else{
     itemElement[currentIndex].classList.remove("active")
     currentIndex--
     itemElement[currentIndex].classList.add("active")
+    }
 })
 
