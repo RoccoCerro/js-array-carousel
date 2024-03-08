@@ -14,21 +14,26 @@ let divHtmlThumbnails = "";
 
 let currentIndex = 0;
 let itemElement = document.getElementsByClassName("item");
+let itemThumbElement = document.getElementsByClassName("thumb")
 let containerItemsThumbnailsElement = document.querySelector(".items-thumbnails");
 
 for (let i = 0; i < arrayImg.length; i++) {
     let img = arrayImg[i];
     let classes = '';
+    let classesThumb = "";
+
     if (i === currentIndex) {
         classes = 'active';
+        classesThumb = `border`
     }
+
     divHtmlImg = `
         <div class="item ${classes}">
             <img src="${img}"></img>
         </div>
     `;
     divHtmlThumbnails = `
-        <div class="col">
+        <div class = "thumb ${classesThumb}">
             <img src="${img}"></img>
         </div>
     `
@@ -42,13 +47,17 @@ nextDomElement.addEventListener("click", function(){
 
     if (currentIndex === arrayImg.length - 1){
         itemElement[currentIndex].classList.remove("active")
+        itemThumbElement[currentIndex].classList.remove("border")
         currentIndex = 0        
         itemElement[currentIndex].classList.add("active")
+        itemThumbElement[currentIndex].classList.add("border")
     }
     else{    
         itemElement[currentIndex].classList.remove("active")
+        itemThumbElement[currentIndex].classList.remove("border")
         currentIndex++
         itemElement[currentIndex].classList.add("active")
+        itemThumbElement[currentIndex].classList.add("border") 
     }
 })
 
@@ -56,13 +65,17 @@ backDomElement.addEventListener("click", function(){
 
     if (currentIndex === 0){
         itemElement[currentIndex].classList.remove("active")
+        itemThumbElement[currentIndex].classList.remove("border")
         currentIndex = 4        
         itemElement[currentIndex].classList.add("active")
+        itemThumbElement[currentIndex].classList.add("border")
     }
     else{
-    itemElement[currentIndex].classList.remove("active")
-    currentIndex--
-    itemElement[currentIndex].classList.add("active")
+        itemElement[currentIndex].classList.remove("active")
+        itemThumbElement[currentIndex].classList.remove("border")
+        currentIndex--
+        itemElement[currentIndex].classList.add("active")
+        itemThumbElement[currentIndex].classList.add("border") 
     }
 })
 

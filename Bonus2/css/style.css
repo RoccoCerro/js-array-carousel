@@ -27,12 +27,19 @@ body{
     flex-direction: column;
         & img {
             width: 100%;
-            height: calc(500px/5);
+            height: calc(490px/5);
             object-fit: cover;
             display: block;
         }
 }
 
+.dark-layer {
+    
+}
+
+.border{
+    border: 5px solid gray;
+}
 
 .ms_arrow{
     border: 2px solid lightgray;
